@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-{	<!-- Device -->
+	<!-- Device -->
 	<project name="Harpia-development/device_motorola_harpia" path="device/motorola/harpia" remote="github" revision="9" />
 	<project name="Harpia-development-aarch64/device_motorola_msm8916-common" path="device/motorola/msm8916-common" remote="github" revision="9_aarch64_wip" />
 	<project name="Harpia-development-aarch64/kernel_harpia.git" path="kernel/motorola/msm8916" remote="github" revision="9_aarch64_wip" />
 	<project name="Harpia-development-aarch64/vendor_harpia" path="vendor/motorola" remote="github" revision="9_aarch64_wip" />
-
-	<!-- Linaro 7.3.1 kernel toolchain -->
-	<project name="Harpia-development-aarch64/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-7.3.1" remote="github" revision="master" />
 
 	<!-- Boringssl -->
 	<project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-15.1" />
@@ -37,7 +34,7 @@
 
 	<!-- Fixes broken compilation in "media-caf" -->
 	<remove-project name="LineageOS/android_hardware_qcom_media" />
-	<project name="PixysOS/hardware_qcom_media" path="hardware/qcom/media-caf/msm8916" remote="github" revision="pie-msm8916" />
+	<project name="lettuce-pie/platform_hardware_qcom_media" path="hardware/qcom/media-caf/msm8916" remote="github" revision="pie2" />
 
 	<!-- Fixes broken compilation in "audio-caf" -->
 	<remove-project name="LineageOS/android_hardware_qcom_audio" />

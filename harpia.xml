@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-	<!-- Device -->
+{	<!-- Device -->
 	<project name="Harpia-development/device_motorola_harpia" path="device/motorola/harpia" remote="github" revision="9" />
-	<project name="Harpia-development/device_motorola_msm8916-common" path="device/motorola/msm8916-common" remote="github" revision="9" />
-	<project name="Harpia-development/kernel_harpia.git" path="kernel/motorola/msm8916" remote="github" revision="9" />
-	<project name="Harpia-development/vendor_harpia" path="vendor/motorola" remote="github" revision="9" />
+	<project name="Harpia-development-aarch64/device_motorola_msm8916-common" path="device/motorola/msm8916-common" remote="github" revision="9_aarch64_wip" />
+	<project name="Harpia-development-aarch64/kernel_harpia.git" path="kernel/motorola/msm8916" remote="github" revision="9_aarch64_wip" />
+	<project name="Harpia-development-aarch64/vendor_harpia" path="vendor/motorola" remote="github" revision="9_aarch64_wip" />
 
+	<!-- Linaro 7.3.1 kernel toolchain -->
+	<project name="Harpia-development-aarch64/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-7.3.1" remote="github" revision="master" />
 
-	<!-- Linaro 7.3 kernel toolchain -->
-	<project name="dev-harsh1998/GCC_BUILDS" path="prebuilts/gcc/linux-x86/arm/arm-eabi-7.3" remote="github" revision="master" />
-	
 	<!-- Boringssl -->
 	<project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-15.1" />
 	<project name="LineageOS/android_external_bson" path="external/bson" remote="github" revision="lineage-15.1" />
@@ -20,9 +19,6 @@
 	<project name="Harpia-development/android_system_sepolicy" path="system/sepolicy" remote="github" revision="lineage-16.0" />
 	<remove-project name="LineageOS/android_device_qcom_sepolicy-legacy" />
 	<project name="Harpia-development/android_device_qcom_sepolicy-legacy" path="device/qcom/sepolicy-legacy" remote="github" revision="lineage-16.0" />
-
-	<!-- LOS Staging repos -->
-        <project path="hardware/qcom/fm" name="LineageOS/android_hardware_qcom_fm" groups="qcom,qcom_fm" />
 
         <project path="packages/overlays/Lineage" name="LineageOS/android_packages_overlays_Lineage" />
 
@@ -58,5 +54,9 @@
 	<!-- Jelly webview is mostly broken, switch to Browser2. -->
 	<remove-project name="LineageOS/android_packages_apps_Jelly" />
 	<project name="platform/packages/apps/Browser2" path="packages/apps/Browser2" remote="aosp" revision="pie-release" />
+
+	<!-- Remove broken crypto benchmark (in 64-bit mode) -->
+	<remove-project name="LineageOS/android_system_extras" />
+	<project name="Harpia-development-aarch64/android_system_extras" path="system/extras" remote="github" revision="no_bench" />
 
 </manifest>
